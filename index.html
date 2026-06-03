@@ -140,8 +140,9 @@
             </div>
           </div>
           <div class="project-visual">
-            <div class="project-mockup">
+            <div class="project-mockup interactive" data-images='["assets/TUA library/1 (1).PNG", "assets/TUA library/2 (1).PNG", "assets/TUA library/3 (1).PNG", "assets/TUA library/4.PNG", "assets/TUA library/5.PNG", "assets/TUA library/6.PNG", "assets/TUA library/7.PNG", "assets/TUA library/8.PNG", "assets/TUA library/9.PNG", "assets/TUA library/10.PNG", "assets/TUA library/11.PNG"]'>
               <img src="assets/tua-library.png" alt="TUA Online Library System" loading="lazy">
+              <div class="mockup-overlay"><span>View Gallery</span></div>
             </div>
           </div>
         </article>
@@ -168,8 +169,9 @@
             </div>
           </div>
           <div class="project-visual">
-            <div class="project-mockup">
+            <div class="project-mockup interactive" data-images='["assets/mannytransfer/screenshot-2025-11-17-222932.jpg", "assets/mannytransfer/screenshot-2025-11-17-223027.jpg", "assets/mannytransfer/screenshot-2025-11-17-223045.jpg", "assets/mannytransfer/screenshot-2025-11-17-223102.jpg", "assets/mannytransfer/screenshot-2025-11-17-223117.jpg", "assets/mannytransfer/screenshot-2025-11-17-223129.jpg", "assets/mannytransfer/screenshot-2025-11-17-223141.jpg", "assets/mannytransfer/screenshot-2025-11-17-223251.jpg", "assets/mannytransfer/screenshot-2025-11-17-223307.jpg", "assets/mannytransfer/screenshot-2025-11-17-223329.jpg", "assets/mannytransfer/screenshot-2025-11-17-223342.jpg"]'>
               <img src="assets/mannytransfer.jpg" alt="MannyTransfer Crypto Exchange" loading="lazy">
+              <div class="mockup-overlay"><span>View Gallery</span></div>
             </div>
           </div>
         </article>
@@ -196,8 +198,9 @@
             </div>
           </div>
           <div class="project-visual">
-            <div class="project-mockup">
+            <div class="project-mockup interactive" data-images='["assets/Wireframe/Wireframe_page-0001.jpg", "assets/Wireframe/Wireframe_page-0002.jpg", "assets/Wireframe/Wireframe_page-0003.jpg", "assets/Wireframe/Wireframe_page-0004.jpg", "assets/Wireframe/Wireframe_page-0005.jpg", "assets/Wireframe/Wireframe_page-0006.jpg", "assets/Wireframe/Wireframe_page-0007.jpg", "assets/Wireframe/Wireframe_page-0008.jpg", "assets/Wireframe/Wireframe_page-0009.jpg", "assets/Wireframe/Wireframe_page-0010.jpg", "assets/Wireframe/Wireframe_page-0011.jpg", "assets/Wireframe/Wireframe_page-0012.jpg", "assets/Wireframe/Wireframe_page-0013.jpg", "assets/Wireframe/Wireframe_page-0014.jpg", "assets/Wireframe/Wireframe_page-0015.jpg", "assets/Wireframe/Wireframe_page-0016.jpg"]'>
               <img src="assets/husay-qms.jpg" alt="Husay QMS Portal" loading="lazy">
+              <div class="mockup-overlay"><span>View Gallery</span></div>
             </div>
           </div>
         </article>
@@ -224,8 +227,9 @@
             </div>
           </div>
           <div class="project-visual">
-            <div class="project-mockup">
+            <div class="project-mockup interactive" data-images='["assets/silid-screenshots/silid/Screenshot 2026-06-04 030529.jpg", "assets/silid-screenshots/silid/Screenshot 2026-06-04 030635.jpg", "assets/silid-screenshots/silid/Screenshot 2026-06-04 030646.jpg", "assets/silid-screenshots/silid/Screenshot 2026-06-04 030657.jpg", "assets/silid-screenshots/silid/Screenshot 2026-06-04 030707.jpg"]'>
               <img src="assets/silid.jpg" alt="Silid Room Reservation System" loading="lazy">
+              <div class="mockup-overlay"><span>View Gallery</span></div>
             </div>
           </div>
         </article>
@@ -330,6 +334,22 @@
       </div>
     </div>
   </section>
+
+  <div class="gallery-modal" id="galleryModal">
+    <button class="gallery-close" id="galleryClose" aria-label="Close Gallery">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <button class="gallery-nav prev" id="galleryPrev" aria-label="Previous Image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="gallery-container">
+      <img src="" alt="Gallery Image" class="gallery-img" id="galleryImg">
+      <div class="gallery-counter" id="galleryCounter"></div>
+    </div>
+    <button class="gallery-nav next" id="galleryNext" aria-label="Next Image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
 
   <script src="script.js"></script>
 </body>

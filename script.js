@@ -206,4 +206,91 @@
       }
     });
   });
+
+  // ── Gallery Modal ──
+  const modal = document.getElementById('galleryModal');
+  const modalImg = document.getElementById('galleryImg');
+  const modalCounter = document.getElementById('galleryCounter');
+  const closeBtn = document.getElementById('galleryClose');
+  const prevBtn = document.getElementById('galleryPrev');
+  const nextBtn = document.getElementById('galleryNext');
+  
+  let currentImages = [];
+  let currentIndex = 0;
+
+  function openModal(images) {
+    if (!images || images.length === 0) return;
+    currentImages = images;
+    currentIndex = 0;
+    updateModalImage();
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden'; // prevent scrolling
+    // Show/hide nav buttons based on image count
+    const showNav = images.length > 1;
+    prevBtn.style.display = showNav ? 'flex' : 'none';
+    nextBtn.style.display = showNav ? 'flex' : 'none';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function updateModalImage() {
+    modalImg.classList.add('loading');
+    
+    // Create new image object to preload
+    const img = new Image();
+    img.onload = () => {
+      modalImg.src = img.src;
+      modalImg.classList.remove('loading');
+    };
+    img.src = currentImages[currentIndex];
+    
+    modalCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    updateModalImage();
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    updateModalImage();
+  }
+
+  // Attach click events to project mockups
+  document.querySelectorAll('.project-mockup.interactive').forEach(mockup => {
+    mockup.addEventListener('click', () => {
+      const imagesAttr = mockup.getAttribute('data-images');
+      if (imagesAttr) {
+        try {
+          const images = JSON.parse(imagesAttr);
+          openModal(images);
+        } catch(e) {
+          console.error("Error parsing gallery images", e);
+        }
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  prevBtn.addEventListener('click', prevImage);
+  nextBtn.addEventListener('click', nextImage);
+
+  // Close on background click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target.classList.contains('gallery-container')) {
+      closeModal();
+    }
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('open')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+  });
 })();

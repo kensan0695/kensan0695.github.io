@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenneth M. Santos — Full-Stack Developer, Cybersecurity Enthusiast, ML Engineer</title>
+  <meta name="description" content="Portfolio of Kenneth M. Santos — BS Information Technology student shipping real products. Full-stack developer specializing in PHP, JavaScript, Python, React, Laravel, and machine learning.">
+  <meta name="author" content="Kenneth M. Santos">
+  <meta property="og:title" content="Kenneth M. Santos — Developer Portfolio">
+  <meta property="og:description" content="Full-stack developer, cybersecurity enthusiast, and ML engineer. I ship real products — not just school projects.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&family=Noto+Serif+JP:wght@200;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">KMS</a>
+    <div class="nav-links">
+      <a href="#about" class="nav-link" data-index="01">About</a>
+      <a href="#projects" class="nav-link" data-index="02">Projects</a>
+      <a href="#skills" class="nav-link" data-index="03">Skills</a>
+      <a href="#contact" class="nav-link" data-index="04">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-label">Portfolio / 2026</div>
+      <h1 class="hero-name">
+        <span class="hero-name-line" data-animate="slide-up">Kenneth</span>
+        <span class="hero-name-line accent" data-animate="slide-up">M. Santos</span>
+      </h1>
+      <div class="hero-tagline">
+        <span class="tagline-prefix">&gt;</span>
+        <span class="tagline-text" id="taglineText"></span>
+        <span class="tagline-cursor">_</span>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+    <div class="hero-year">2026</div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="section-container">
+      <div class="section-header" data-animate="fade-in">
+        <span class="section-index">01</span>
+        <h2 class="section-title">About</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo-wrapper" data-animate="fade-in">
+          <div class="about-photo">
+            <img src="assets/kenneth.png" alt="Kenneth M. Santos" width="360" height="420">
+          </div>
+        </div>
+        <div class="about-text" data-animate="fade-in">
+          <p class="about-lead">I build things that work in production — not just in classrooms.</p>
+          <p>BS Information Technology student at <strong>Trinity University of Asia</strong>, graduating 2026. I've been shipping full-stack applications, training ML models, and hardening systems throughout my academic career.</p>
+          <p>My work spans web platforms with thousands of users, machine learning pipelines for real university systems, and security-first architectures with proper auth flows. I don't wait for permission to build.</p>
+        </div>
+        <div class="about-details" data-animate="fade-in">
+          <div class="detail-item">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">Manila, Philippines</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">University</span>
+            <span class="detail-value">Trinity University of Asia</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Degree</span>
+            <span class="detail-value">BS Information Technology</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Graduation</span>
+            <span class="detail-value">2026</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Focus</span>
+            <span class="detail-value">Full-Stack · ML · Security</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects" id="projects">
+    <div class="section-container">
+      <div class="section-header" data-animate="fade-in">
+        <span class="section-index">02</span>
+        <h2 class="section-title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-list">
+        <!-- Project 1: TUA Online Library -->
+        <article class="project-card" data-animate="fade-in">
+          <div class="project-number">01</div>
+          <div class="project-info">
+            <h3 class="project-name">TUA Online Library</h3>
+            <p class="project-desc">Web-based library system with ML-powered book recommendation engine. Uses SBERT for semantic similarity, LSTM for call number prediction, and LightGBM for ranking — trained on real university catalog data scraped with Selenium.</p>
+            <div class="project-stack">
+              <span class="stack-badge">Python</span>
+              <span class="stack-badge">SBERT</span>
+              <span class="stack-badge">LSTM</span>
+              <span class="stack-badge">LightGBM</span>
+              <span class="stack-badge">Selenium</span>
+              <span class="stack-badge">Web Scraping</span>
+            </div>
+            <div class="project-links">
+              <a href="https://tuaonlinelibrary.me/" target="_blank" rel="noopener" class="project-link">
+                <span>Live Site</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-mockup">
+              <img src="assets/tua-library.png" alt="TUA Online Library System" loading="lazy">
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: MannyTransfer -->
+        <article class="project-card" data-animate="fade-in">
+          <div class="project-number">02</div>
+          <div class="project-info">
+            <h3 class="project-name">MannyTransfer</h3>
+            <p class="project-desc">Full-stack secure crypto exchange simulation with TOTP-based two-factor authentication, KYC identity verification, role-based admin dashboard with CSRF protection, and complete transaction audit trails.</p>
+            <div class="project-stack">
+              <span class="stack-badge">PHP</span>
+              <span class="stack-badge">SQL</span>
+              <span class="stack-badge">Docker</span>
+              <span class="stack-badge">TOTP 2FA</span>
+              <span class="stack-badge">KYC</span>
+              <span class="stack-badge">RBAC</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/kennethsantos" target="_blank" rel="noopener" class="project-link">
+                <span>GitHub</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-mockup">
+              <img src="assets/mannytransfer.jpg" alt="MannyTransfer Crypto Exchange" loading="lazy">
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Husay QMS -->
+        <article class="project-card" data-animate="fade-in">
+          <div class="project-number">03</div>
+          <div class="project-info">
+            <h3 class="project-name">Husay QMS</h3>
+            <p class="project-desc">ISO-compliant Quality Management System portal for a university. Features document lifecycle management, audit planning with auto-CAR generation, corrective action tracking, ROAP/OPCR modules, multi-campus RBAC, and full audit trails.</p>
+            <div class="project-stack">
+              <span class="stack-badge">Laravel 12</span>
+              <span class="stack-badge">React</span>
+              <span class="stack-badge">Inertia.js</span>
+              <span class="stack-badge">PostgreSQL</span>
+              <span class="stack-badge">Tailwind</span>
+              <span class="stack-badge">PHP 8.5</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/kennethsantos" target="_blank" rel="noopener" class="project-link">
+                <span>GitHub</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-mockup">
+              <img src="assets/husay-qms.jpg" alt="Husay QMS Portal" loading="lazy">
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Silid -->
+        <article class="project-card" data-animate="fade-in">
+          <div class="project-number">04</div>
+          <div class="project-info">
+            <h3 class="project-name">Silid</h3>
+            <p class="project-desc">University room reservation system with tiered approval workflows, Google Calendar integration, real-time freebusy conflict detection, QR check-in, waitlist queuing, and a permission matrix admin UI with Google OAuth SSO.</p>
+            <div class="project-stack">
+              <span class="stack-badge">React</span>
+              <span class="stack-badge">TypeScript</span>
+              <span class="stack-badge">Fastify</span>
+              <span class="stack-badge">Prisma</span>
+              <span class="stack-badge">PostgreSQL</span>
+              <span class="stack-badge">Google API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/kennethsantos" target="_blank" rel="noopener" class="project-link">
+                <span>GitHub</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.5"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-mockup">
+              <img src="assets/silid.jpg" alt="Silid Room Reservation System" loading="lazy">
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills" id="skills">
+    <div class="section-container">
+      <div class="section-header" data-animate="fade-in">
+        <span class="section-index">03</span>
+        <h2 class="section-title">Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-group" data-animate="fade-in">
+          <div class="skill-group-header">
+            <div class="skill-icon">&#x2039;/&#x203A;</div>
+            <h3>Languages</h3>
+          </div>
+          <ul class="skill-list">
+            <li>PHP</li><li>JavaScript</li><li>Python</li><li>TypeScript</li><li>SQL</li><li>HTML / CSS</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-animate="fade-in">
+          <div class="skill-group-header">
+            <div class="skill-icon">{&nbsp;}</div>
+            <h3>Frameworks</h3>
+          </div>
+          <ul class="skill-list">
+            <li>React</li><li>Laravel</li><li>Node.js</li><li>Prisma</li><li>Fastify</li><li>Inertia.js</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-animate="fade-in">
+          <div class="skill-group-header">
+            <div class="skill-icon">$_</div>
+            <h3>DevOps & Tools</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Git</li><li>GitHub</li><li>Bitbucket</li><li>Linux</li><li>Docker</li><li>Visual Studio</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-animate="fade-in">
+          <div class="skill-group-header">
+            <div class="skill-icon">&#x25C8;</div>
+            <h3>Networking & Security</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Cisco Packet Tracer</li><li>Wireshark</li><li>TOTP / 2FA</li><li>CSRF Protection</li><li>RBAC</li><li>KYC Flows</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-animate="fade-in">
+          <div class="skill-group-header">
+            <div class="skill-icon">&#x25A3;</div>
+            <h3>Databases</h3>
+          </div>
+          <ul class="skill-list">
+            <li>PostgreSQL</li><li>MySQL</li><li>Prisma ORM</li><li>Eloquent ORM</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-animate="fade-in">
+          <div class="skill-group-header">
+            <div class="skill-icon">&#x2261;</div>
+            <h3>ML & Data</h3>
+          </div>
+          <ul class="skill-list">
+            <li>SBERT</li><li>LSTM</li><li>LightGBM</li><li>Selenium</li><li>Web Scraping</li><li>pandas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="section-container">
+      <div class="section-header" data-animate="fade-in">
+        <span class="section-index">04</span>
+        <h2 class="section-title">Contact</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-content" data-animate="fade-in">
+        <p class="contact-lead">Let's build something together.</p>
+        <div class="contact-links">
+          <a href="mailto:skenneth695@gmail.com" class="contact-item" id="contact-email">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">skenneth695@gmail.com</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+          <a href="https://github.com/kennethsantos" target="_blank" rel="noopener" class="contact-item" id="contact-github">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/kennethsantos</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="contact-footer">
+        <span>Kenneth M. Santos &copy; 2026</span>
+        <span>Manila, Philippines</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
